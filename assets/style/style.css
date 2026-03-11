@@ -1,0 +1,84 @@
+/* Reset simple */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style général */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background: #333;
+    color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+/* Menu navigation */
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+/* Sections */
+section {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+section h2 {
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+/* Articles */
+article {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-left: 4px solid #007acc;
+    background: #fafafa;
+}
+
+article h3 {
+    margin-bottom: 5px;
+}
+
+/* Image */
+img {
+    max-width: 120px;
+    height: auto;
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+}

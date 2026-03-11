@@ -20,6 +20,9 @@
             <li>
                 <a href="formulaire.php">formulaire de contact</a>
             </li>
+            <li>
+                <a href="eau.php">eau</a>
+            </li>
         </ul>
     </header>
     <main>
