@@ -1,17 +1,10 @@
 <?php 
-    $temperature = 24;
-    $etat_eau = "";
+    $nombre = 13;
+    $lignes_mul = "";
 
-    if($temperature<0){
-        $etat_eau = "glace";
-    }else if($temperature>=0 && $temperature<25){
-        $etat_eau = "froide";
-    }else if($temperature>=25 && $temperature<50){
-        $etat_eau = "chaude";
-    }else if($temperature>=50 && $temperature<100){
-        $etat_eau = "brulante";
-    }else{
-        $etat_eau = "vapeur";
+    for($i=0; $i<=12; $i++){
+        $produit = $nombre * $i;
+        $lignes_mul .= "$nombre * $i = $produit<br>";
     }
 ?>
 <!DOCTYPE html>
@@ -33,10 +26,10 @@
                 <a href="page1.php">page 1</a>
             </li>
             <li>
-                <a href="#">Exercice-1</a>
+                <a href="eau.php">Exercice-1</a>
             </li>
             <li>
-                <a href="multiplication.php">Exercice-2</a>
+                <a href="#">Exercice-2</a>
             </li>
             <li>
                 <a href="multiplications.php">Exercice-3</a>
@@ -51,8 +44,11 @@
     </header>
     <main>
         <section>
-            <h1>Exercice 1</h1>
-            <p>L'état de l'eau : <?php echo $etat_eau; ?> </p>
+            <h1>Exercice 2</h1>
+            <article>
+                <h3>Table de multiplication de <?php echo $nombre; ?></h3>
+                <p><?php echo $lignes_mul; ?></p>
+            </article>
         </section>
     </main>
     

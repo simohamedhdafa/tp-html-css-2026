@@ -18,10 +18,19 @@
                 <a href="page1.php">page 1</a>
             </li>
             <li>
-                <a href="formulaire.php">formulaire de contact</a>
+                <a href="eau.php">Exercice-1</a>
             </li>
             <li>
-                <a href="eau.php">eau</a>
+                <a href="multiplication.php">Exercice-2</a>
+            </li>
+            <li>
+                <a href="multiplications.php">Exercice-3</a>
+            </li>
+            <li>
+                <a href="mois.php">Exercice-4</a>
+            </li>
+            <li>
+                <a href="formulaire.php">formulaire de contact</a>
             </li>
         </ul>
     </header>

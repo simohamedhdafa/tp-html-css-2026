@@ -1,17 +1,22 @@
 <?php 
-    $temperature = 24;
-    $etat_eau = "";
+    $mois = 1;
+    $annee = 2026;
+    $nb = 0;
 
-    if($temperature<0){
-        $etat_eau = "glace";
-    }else if($temperature>=0 && $temperature<25){
-        $etat_eau = "froide";
-    }else if($temperature>=25 && $temperature<50){
-        $etat_eau = "chaude";
-    }else if($temperature>=50 && $temperature<100){
-        $etat_eau = "brulante";
-    }else{
-        $etat_eau = "vapeur";
+    switch($mois){
+        // 4,6,9,11,2
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            $nb = 30;
+            break;
+        case 2:
+            // python : nb = 29 if annee%4==0 else 28
+            $nb = $annee%4==0 ? 29 : 28; 
+            break;
+        default:
+            $nb = 31;
     }
 ?>
 <!DOCTYPE html>
@@ -33,7 +38,7 @@
                 <a href="page1.php">page 1</a>
             </li>
             <li>
-                <a href="#">Exercice-1</a>
+                <a href="eau.php">Exercice-1</a>
             </li>
             <li>
                 <a href="multiplication.php">Exercice-2</a>
@@ -42,7 +47,7 @@
                 <a href="multiplications.php">Exercice-3</a>
             </li>
             <li>
-                <a href="mois.php">Exercice-4</a>
+                <a href="#">Exercice-4</a>
             </li>
             <li>
                 <a href="formulaire.php">formulaire de contact</a>
@@ -51,8 +56,8 @@
     </header>
     <main>
         <section>
-            <h1>Exercice 1</h1>
-            <p>L'état de l'eau : <?php echo $etat_eau; ?> </p>
+            <h1>Exercice 4</h1>
+            <p>Il y a <?php echo $nb; ?> jours dans le mois <?php echo $mois; ?> de l'année <?php echo $annee; ?></p>
         </section>
     </main>
     

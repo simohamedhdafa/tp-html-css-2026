@@ -1,19 +1,3 @@
-<?php 
-    $temperature = 24;
-    $etat_eau = "";
-
-    if($temperature<0){
-        $etat_eau = "glace";
-    }else if($temperature>=0 && $temperature<25){
-        $etat_eau = "froide";
-    }else if($temperature>=25 && $temperature<50){
-        $etat_eau = "chaude";
-    }else if($temperature>=50 && $temperature<100){
-        $etat_eau = "brulante";
-    }else{
-        $etat_eau = "vapeur";
-    }
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,13 +17,13 @@
                 <a href="page1.php">page 1</a>
             </li>
             <li>
-                <a href="#">Exercice-1</a>
+                <a href="eau.php">Exercice-1</a>
             </li>
             <li>
                 <a href="multiplication.php">Exercice-2</a>
             </li>
             <li>
-                <a href="multiplications.php">Exercice-3</a>
+                <a href="#">Exercice-3</a>
             </li>
             <li>
                 <a href="mois.php">Exercice-4</a>
@@ -51,8 +35,17 @@
     </header>
     <main>
         <section>
-            <h1>Exercice 1</h1>
-            <p>L'état de l'eau : <?php echo $etat_eau; ?> </p>
+            <h1>Exercice 3 : Les tables de multiplication</h1>
+
+            <?php for($i=0; $i<=10; $i++){ ?>
+                <article>
+                    <h3>table de <?php echo $i; ?></h3>
+                    <?php for($j=0; $j<=10; $j++){ ?>
+                        <p><?php echo $i; ?> * <?php echo $j; ?> = <?php echo $i*$j; ?></p>
+                    <?php } ?>
+                </article>
+            <?php } ?>
+
         </section>
     </main>
     
