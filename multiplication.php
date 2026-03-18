@@ -1,5 +1,10 @@
 <?php 
-    $nombre = 13;
+    $nombre = 1;
+    
+    if(isset($_GET['nombre'])){
+            $nombre = (int) $_GET['nombre'];
+    }
+    
     $lignes_mul = "";
 
     for($i=0; $i<=12; $i++){
@@ -43,6 +48,13 @@
         </ul>
     </header>
     <main>
+        <section>
+            <form action="multiplication.php" method="get">
+                <label>Nombre : </label>
+                <input type="text" name="nombre">
+                <input type="submit" value="Calculer">
+            </form>
+        </section>
         <section>
             <h1>Exercice 2</h1>
             <article>
