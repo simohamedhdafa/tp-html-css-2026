@@ -1,15 +1,22 @@
-<?php 
-    $nombre = 1;
-    
-    if(isset($_GET['nombre'])){
-            $nombre = (int) $_GET['nombre'];
-    }
-    
+<?php
+    $nombre = null;
+    $erreur = null;
     $lignes_mul = "";
 
-    for($i=0; $i<=12; $i++){
-        $produit = $nombre * $i;
-        $lignes_mul .= "$nombre * $i = $produit<br>";
+    if(isset($_GET['nombre'])){
+        $valeur = $_GET['nombre'];
+
+        if($valeur === ''){
+            $erreur = "Veuillez saisir un nombre.";
+        } elseif(!ctype_digit(ltrim($valeur, '-')) || strpos($valeur, '.') !== false){
+            $erreur = "La valeur saisie doit être un nombre entier.";
+        } else {
+            $nombre = (int) $valeur;
+            for($i = 0; $i <= 12; $i++){
+                $produit = $nombre * $i;
+                $lignes_mul .= "$nombre * $i = $produit<br>";
+            }
+        }
     }
 ?>
 <!DOCTYPE html>
@@ -57,10 +64,14 @@
         </section>
         <section>
             <h1>Exercice 2</h1>
-            <article>
-                <h3>Table de multiplication de <?php echo $nombre; ?></h3>
-                <p><?php echo $lignes_mul; ?></p>
-            </article>
+            <?php if($erreur): ?>
+                <p class="erreur"><?php echo $erreur; ?></p>
+            <?php elseif($nombre !== null): ?>
+                <article>
+                    <h3>Table de multiplication de <?php echo $nombre; ?></h3>
+                    <p><?php echo $lignes_mul; ?></p>
+                </article>
+            <?php endif; ?>
         </section>
     </main>
     
